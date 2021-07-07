@@ -1,16 +1,20 @@
 import {Component, OnInit} from '@angular/core';
 
 import { navItems } from '../../_nav';
-import {ActivatedRoute, Router} from "@angular/router";
+import { cilEnvelopeOpen, flagSet } from '@coreui/icons';
+import { IconModule, IconSetModule, IconSetService } from '@coreui/icons-angular';
 
 @Component({
   selector: 'app-dashboard',
-  templateUrl: './default-layout.component.html'
+  templateUrl: './default-layout.component.html',
+  providers: [IconSetService],
 })
 export class DefaultLayoutComponent {
   ativeRoute: String = "";
 
-  constructor() {
+  constructor(public iconSet: IconSetService) {
+    // iconSet singleton
+    iconSet.icons = { cilEnvelopeOpen, ...flagSet };
   }
 
   minimized = false;

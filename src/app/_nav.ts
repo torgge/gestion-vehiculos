@@ -8,17 +8,17 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Servicios',
-    url: '/books',
+    url: '/servicios',
     icon: 'icon-settings'
   },
   {
     name: 'Autos',
-    url: '/books',
+    url: '/autos',
     icon: 'icon-star'
   },
   {
     name: 'Usuarios',
-    url: '/books',
+    url: '/usuarios',
     icon: 'icon-people'
   }
 

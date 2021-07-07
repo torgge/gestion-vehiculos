@@ -1,26 +1,25 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BookDetailComponent } from './book-detail/book-detail.component';
-
-import { BookComponent } from './book-list/book.component';
+import { AutosListComponent } from './list/autos.list.component';
+import { AutosViewComponent } from './view/autos.view.component';
 
 const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'Books'
+      title: 'Autos'
     },
     children: [
       {
         path: '',
-        component: BookComponent,
+        component: AutosListComponent,
         data: {
           title: 'List'
         }
       },
       {
-        path: 'detail/:bookId',
-        component: BookDetailComponent,
+        path: 'autos/:autoId',
+        component: AutosViewComponent,
         data: {
           title: 'Detail'
         }
@@ -33,4 +32,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class BookRoutingModule {}
+export class AutosRoutingModule {}

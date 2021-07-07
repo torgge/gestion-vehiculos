@@ -21,7 +21,11 @@ import {
 } from '@coreui/angular';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
-import { IconModule } from '@coreui/icons-angular';
+import { IconModule, IconSetModule, IconSetService } from '@coreui/icons-angular';
+import { AutosViewComponent } from './views/autos/view/autos.view.component';
+import { ServiciosViewComponent } from './views/servicios/view/servicios-view.component';
+import { UsuariosViewComponent } from './views/usuarios/view/usuarios.view.component';
+import { AutosModule, ServiciosModule, UsuariosModule } from './views';
 
 @NgModule({
   imports: [
@@ -34,16 +38,20 @@ import { IconModule } from '@coreui/icons-angular';
     AppHeaderModule,
     AppSidebarModule,
     PerfectScrollbarModule,
-    IconModule
+    IconModule,
+    IconSetModule.forRoot(),
+    UsuariosModule,
+    ServiciosModule,
+    AutosModule
   ],
   declarations: [
     AppComponent,
-    ...APP_CONTAINERS
+    ...APP_CONTAINERS,
   ],
   providers: [{
     provide: LocationStrategy,
     useClass: HashLocationStrategy
-  }],
+  }, IconSetService],
   exports: [],
   bootstrap: [AppComponent]
 })
