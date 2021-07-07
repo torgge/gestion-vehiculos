@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
 import {SupabaseClient} from "@supabase/supabase-js";
-import {Book} from "../models/book.model";
-import {Author} from "../models/author.model";
+import {Book} from "../models/servicio.model";
+import {Author} from "../models/usuario.model";
 
 @Injectable({
   providedIn: 'root'

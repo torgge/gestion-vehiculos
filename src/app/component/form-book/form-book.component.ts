@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import {Book} from "../../shared/models/book.model";
+import {Book} from "../../shared/models/servicio.model";
 
 @Component({
   selector: 'app-form-book',

@@ -1,4 +1,4 @@
-import { Book } from '../models/book.model';
+import { Book } from '../models/servicio.model';
 import { Injectable } from '@angular/core';
 import { createClient, SupabaseClient } from '@supabase/supabase-js'
 import { environment } from "../../../environments/environment";

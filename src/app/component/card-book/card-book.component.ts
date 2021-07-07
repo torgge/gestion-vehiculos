@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
-import {Book} from "../../shared/models/book.model";
+import {Book} from "../../shared/models/servicio.model";
 
 @Component({
   selector: 'app-card-book',

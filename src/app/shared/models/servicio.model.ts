@@ -1,4 +1,4 @@
-export type Book =
+export type Servicio =
   {
     book_id?: any;
     author_id: any;
